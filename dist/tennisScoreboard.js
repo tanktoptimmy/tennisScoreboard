@@ -20175,18 +20175,55 @@ return /******/ (function(modules) { // webpackBootstrap
 	var Points = function (_Component) {
 	    _inherits(Points, _Component);
 
-	    function Points() {
+	    function Points(props) {
 	        _classCallCheck(this, Points);
 
-	        return _possibleConstructorReturn(this, (Points.__proto__ || Object.getPrototypeOf(Points)).apply(this, arguments));
+	        var _this = _possibleConstructorReturn(this, (Points.__proto__ || Object.getPrototypeOf(Points)).call(this, props));
+
+	        _this.state = { animating: false };
+	        return _this;
 	    }
 
 	    _createClass(Points, [{
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	            var _this2 = this;
+
+	            this.elmPoints.addEventListener("animationend", function () {
+	                return _this2.setState({ animating: false });
+	            });
+	        }
+	    }, {
+	        key: 'componentWillUpdate',
+	        value: function componentWillUpdate(nextProps) {
+	            var prevPoints = this.props.points;
+	            var newPoints = nextProps.points;
+
+	            var animating = this.state.animating;
+
+
+	            if (prevPoints != newPoints && !animating) {
+	                this.setState({ animating: true });
+	            }
+	        }
+	    }, {
+	        key: 'shouldComponentUpdate',
+	        value: function shouldComponentUpdate(nextProps, nextState) {
+	            var prevPoints = this.props.points;
+	            var newPoints = nextProps.points;
+	            return prevPoints != newPoints;
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
+	            var _this3 = this;
+
+	            var pointStyle = this.state.animating ? "tsb__points tsb__points-animating" : "tsb__points";
 	            return _react2.default.createElement(
 	                'div',
-	                { className: 'tsb__points' },
+	                { className: pointStyle, ref: function ref(elm) {
+	                        return _this3.elmPoints = elm;
+	                    } },
 	                this.props.points,
 	                _react2.default.createElement(
 	                    'style',
@@ -20211,7 +20248,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.default = "\n    .tsb__points {\n        font-family: SkyBold,Arial,sans-serif;\n        font-size: 20px;\n        background-color: #D92231;\n        text-align: center;\n        line-height: 48px;\n    }\n    ";
+	exports.default = "\n    .tsb__points {\n        font-family: SkyBold,Arial,sans-serif;\n        font-size: 20px;\n        background-color: #D92231;\n        text-align: center;\n        line-height: 48px;\n    }\n\n    .tsb__points-animating {\n        animation: pulse 5s infinite;\n    }\n\n    @keyframes pulse {\n        0% {\n            background-color: #001F3F;\n        }\n        100% {\n            background-color: #FF4136;\n        }\n    }\n    ";
 
 /***/ },
 /* 167 */
