@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Points from '../Points';
 import BallIcon from '../BallIcon';
 
-import player from './styles';
+import styles from './styles';
 
 export default class Player extends Component {
     render() {
@@ -19,8 +19,8 @@ export default class Player extends Component {
                 <td className="tsb__points-holder"><Points points = { setScore }/></td>
                 <td className="tsb__points-holder"><Points points = { gameScore }/></td>
                 <td className="tsb__points-holder"><Points points = { points }/></td>
-                 <style jsx global>
-                    {player}
+                 <style jsx>
+                    {styles}
                 </style>
             </tr>
     }

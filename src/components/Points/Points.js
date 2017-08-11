@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import points from './styles';
+import styles from './styles';
 export default class Points extends Component {
     constructor(props) {
         super(props);
@@ -33,7 +33,7 @@ export default class Points extends Component {
         return <div className={pointStyle} ref={elm => this.elmPoints = elm}>
             {this.props.points}
             <style jsx>
-                    {points}
+                    {styles}
             </style>
         </div>;
     }

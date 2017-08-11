@@ -19847,6 +19847,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Player2 = _interopRequireDefault(_Player);
 
+	var _CompletedSets = __webpack_require__(174);
+
+	var _CompletedSets2 = _interopRequireDefault(_CompletedSets);
+
+	var _MatchInfo = __webpack_require__(177);
+
+	var _MatchInfo2 = _interopRequireDefault(_MatchInfo);
+
 	var _styles = __webpack_require__(170);
 
 	var _styles2 = _interopRequireDefault(_styles);
@@ -19935,50 +19943,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(
 	                        'tfoot',
 	                        null,
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                { colSpan: '100%' },
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'scoreboard--tennis__completedsets push--top' },
-	                                    _react2.default.createElement(
-	                                        'span',
-	                                        { className: 'scoreboard--tennis__title' },
-	                                        'Previous Sets:'
-	                                    ),
-	                                    _react2.default.createElement(
-	                                        'span',
-	                                        null,
-	                                        '6 - 3'
-	                                    )
-	                                )
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                { colSpan: '100%' },
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'scoreboard--tennis__status push-top' },
-	                                    _react2.default.createElement(
-	                                        'span',
-	                                        { className: 'scoreboard--tennis__title' },
-	                                        'Match Info:'
-	                                    ),
-	                                    _react2.default.createElement(
-	                                        'span',
-	                                        { className: 'scoreboard__highlight' },
-	                                        'Match finished'
-	                                    )
-	                                )
-	                            )
-	                        )
+	                        _react2.default.createElement(_CompletedSets2.default, { completedSets: completedSets }),
+	                        _react2.default.createElement(_MatchInfo2.default, { info: statusText })
 	                    )
 	                ),
 	                _react2.default.createElement(
@@ -20111,7 +20077,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                ),
 	                _react2.default.createElement(
 	                    'style',
-	                    { jsx: true, global: true },
+	                    { jsx: true },
 	                    _styles2.default
 	                )
 	            );
@@ -20317,7 +20283,224 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.default = "\n    .tsb__holder {\n        background-color: #07073d;\n        padding: 8px;\n        color: white;\n    }\n    .tsb {\n        width: 100%;\n        font-family: SkyMedium,Arial,sans-serif;\n        border-spacing: 4px 16px;\n        border-collapse: separate;\n        margin-bottom: 0;\n        padding: 0 4px;\n    }\n    .tsb td {\n        padding: 0;\n    }\n    .tsb__header {\n        padding: 0;\n\n        line-height: 24px;\n        text-align: center;\n\n        font-family: SkyMedium,Arial,sans-serif;\n        font-size: 12px;\n        color: #CDD9E2;\n\n    }\n    .tsb__tv {\n        text-align: left;\n        padding: 0;\n    }\n    ";
+	exports.default = "\n    .tsb__holder {\n        background-color: #07073d;\n        padding: 8px;\n        color: white;\n    }\n\n    .tsb {\n        width: 100%;\n        font-family: SkyMedium,Arial,sans-serif;\n        border-spacing: 4px 8px;\n        border-collapse: separate;\n        margin-bottom: 0;\n        padding: 0 4px;\n    }\n\n    .tsb td {\n        padding: 0;\n    }\n\n    .tsb__header {\n        padding: 0;\n        line-height: 24px;\n        text-align: center;\n        font-family: SkyMedium,Arial,sans-serif;\n        font-size: 12px;\n        color: #CDD9E2;\n    }\n\n    .tsb__tv {\n        text-align: left;\n        padding: 0;\n    }\n    ";
+
+/***/ },
+/* 171 */,
+/* 172 */,
+/* 173 */,
+/* 174 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _CompletedSets = __webpack_require__(175);
+
+	Object.defineProperty(exports, 'default', {
+	  enumerable: true,
+	  get: function get() {
+	    return _interopRequireDefault(_CompletedSets).default;
+	  }
+	});
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ },
+/* 175 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _styles = __webpack_require__(176);
+
+	var _styles2 = _interopRequireDefault(_styles);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var CompletedSets = function (_Component) {
+	    _inherits(CompletedSets, _Component);
+
+	    function CompletedSets() {
+	        _classCallCheck(this, CompletedSets);
+
+	        return _possibleConstructorReturn(this, (CompletedSets.__proto__ || Object.getPrototypeOf(CompletedSets)).apply(this, arguments));
+	    }
+
+	    _createClass(CompletedSets, [{
+	        key: 'render',
+	        value: function render() {
+	            var completedSets = this.props.completedSets;
+
+	            var sets = completedSets.slice(0, -1).map(function (set) {
+	                return set[0] + ' - ' + set[1];
+	            }).join(' / ');
+	            return _react2.default.createElement(
+	                'tr',
+	                null,
+	                _react2.default.createElement(
+	                    'td',
+	                    { colSpan: '100%', className: 'tsb__sets' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'tsb__sets-title' },
+	                        'Previous Sets:'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        null,
+	                        sets
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'style',
+	                    { jsx: true },
+	                    _styles2.default
+	                )
+	            );
+	        }
+	    }]);
+
+	    return CompletedSets;
+	}(_react.Component);
+
+	exports.default = CompletedSets;
+
+/***/ },
+/* 176 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = "\n    .tsb__sets {\n        font-family: Arial,sans-serif;\n        font-size: 12px;\n        line-height: 1.5;\n        margin-top: 12px;\n        color: #fff;\n    }\n    .tsb__sets-title {\n        display: inline-block;\n        width: 95px;\n        color: #98ADCF;\n    }\n    ";
+
+/***/ },
+/* 177 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _MatchInfo = __webpack_require__(178);
+
+	Object.defineProperty(exports, 'default', {
+	  enumerable: true,
+	  get: function get() {
+	    return _interopRequireDefault(_MatchInfo).default;
+	  }
+	});
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ },
+/* 178 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _styles = __webpack_require__(179);
+
+	var _styles2 = _interopRequireDefault(_styles);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var MatchInfo = function (_Component) {
+	    _inherits(MatchInfo, _Component);
+
+	    function MatchInfo() {
+	        _classCallCheck(this, MatchInfo);
+
+	        return _possibleConstructorReturn(this, (MatchInfo.__proto__ || Object.getPrototypeOf(MatchInfo)).apply(this, arguments));
+	    }
+
+	    _createClass(MatchInfo, [{
+	        key: 'render',
+	        value: function render() {
+	            var info = this.props.info;
+
+
+	            return _react2.default.createElement(
+	                'tr',
+	                null,
+	                _react2.default.createElement(
+	                    'td',
+	                    { colSpan: '100%', className: 'tsb__info' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'tsb__info-title' },
+	                        'Match Info:'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        null,
+	                        info
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'style',
+	                    { jsx: true },
+	                    _styles2.default
+	                )
+	            );
+	        }
+	    }]);
+
+	    return MatchInfo;
+	}(_react.Component);
+
+	exports.default = MatchInfo;
+
+/***/ },
+/* 179 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = "\n    .tsb__info {\n        font-family: Arial,sans-serif;\n        font-size: 12px;\n        line-height: 1.5;\n        margin-top: 12px;\n        color: #fff;\n    }\n    .tsb__info-title {\n        display: inline-block;\n        width: 95px;\n        color: #98ADCF;\n    }\n    ";
 
 /***/ }
 /******/ ])

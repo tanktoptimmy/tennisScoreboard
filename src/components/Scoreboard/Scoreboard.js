@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Player from '../Player';
+import CompletedSets from '../CompletedSets';
+import MatchInfo from '../MatchInfo';
 import styles from './styles';
 
 
@@ -46,20 +48,8 @@ export default class Scoreboard extends Component {
                         })}
                     </tbody>
                     <tfoot>
-                        <tr>
-                            <td colSpan="100%">
-                                <div className="scoreboard--tennis__completedsets push--top">
-                                    <span className="scoreboard--tennis__title">Previous Sets:</span><span>6 - 3</span></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colSpan="100%">
-                                <div className="scoreboard--tennis__status push-top">
-                                    <span className="scoreboard--tennis__title">Match Info:</span>
-                                    <span className="scoreboard__highlight">Match finished</span>
-                                </div>
-                            </td>
-                        </tr>
+                        {<CompletedSets completedSets = { completedSets }/>}
+                        {<MatchInfo info = { statusText }/>}
                     </tfoot>
                 </table>
 
